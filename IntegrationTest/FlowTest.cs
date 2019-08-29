@@ -25,6 +25,7 @@ namespace IntegrationTest
         .Port(8883)
         .Database("tracker_registration_dotnet_test")
        .SetEnvironmentVariable("EUREKA__CLIENT__SHOULDREGISTERWITHEUREKA", "false")
+       .SetEnvironmentVariable("DISABLE_AUTH", "true")
         .Build();
      _allocationsServer = TestAppServerBuilder()
         .AppName("AllocationsServer")
@@ -32,6 +33,7 @@ namespace IntegrationTest
         .Database("tracker_allocations_dotnet_test")
         .SetEnvironmentVariable("REGISTRATION_SERVER_ENDPOINT", _registrationServer.Url())
        .SetEnvironmentVariable("EUREKA__CLIENT__SHOULDFETCHREGISTRY", "false")
+       .SetEnvironmentVariable("DISABLE_AUTH", "true")
         .Build();
      _backlogServer = TestAppServerBuilder()
         .AppName("BacklogServer")
@@ -39,6 +41,7 @@ namespace IntegrationTest
         .Database("tracker_backlog_dotnet_test")
         .SetEnvironmentVariable("REGISTRATION_SERVER_ENDPOINT", _registrationServer.Url())
        .SetEnvironmentVariable("EUREKA__CLIENT__SHOULDFETCHREGISTRY", "false")
+       .SetEnvironmentVariable("DISABLE_AUTH", "true")
         .Build();
      _timesheetsServer = TestAppServerBuilder()
         .AppName("TimesheetsServer")
@@ -46,6 +49,7 @@ namespace IntegrationTest
         .Database("tracker_timesheets_dotnet_test")
         .SetEnvironmentVariable("REGISTRATION_SERVER_ENDPOINT", _registrationServer.Url())
        .SetEnvironmentVariable("EUREKA__CLIENT__SHOULDFETCHREGISTRY", "false")
+       .SetEnvironmentVariable("DISABLE_AUTH", "true")
         .Build();
         }
 

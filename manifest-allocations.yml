@@ -6,9 +6,12 @@ applications:
   routes:
   - route: allocations-stage-de-pr.cfapps.io
   path: Applications/AllocationsServer/bin/Release/netcoreapp2.1/publish
+  env:
+    GRANT_TYPE: client_credentials
   services:
   - tracker-allocations-database
   - tracker-service-registry-de-pr
   - tracker-amqp
   - tracker-circuit-breaker-dashboard
+  - tracker-sso
   

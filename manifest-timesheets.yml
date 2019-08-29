@@ -7,6 +7,6 @@ applications:
   - route: timesheets-stage-de-pr.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.1/publish
   env:
-    REGISTRATION_SERVER_ENDPOINT: registration-stage-de-pr.cfapps.io
+    REGISTRATION_SERVER_ENDPOINT: http://registration-stage-de-pr.cfapps.io
   services:
   - tracker-timesheets-database

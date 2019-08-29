@@ -9,6 +9,9 @@ namespace AllocationsServer
     {
         public static void Main(string[] args)
         {
+            if(true==true){
+                
+            }
             BuildWebHost(args).Run();
         }
 

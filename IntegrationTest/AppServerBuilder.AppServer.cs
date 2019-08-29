@@ -17,7 +17,7 @@ namespace IntegrationTest
             private Process _process;
             private readonly ProcessStartInfo _startInfo;
             private readonly string _dllPath;
-
+            
             internal AppServer(int port, string appName, IDictionary<string, string> environmentVariables,
                 string database)
             {

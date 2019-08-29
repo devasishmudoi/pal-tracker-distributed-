@@ -9,10 +9,7 @@ namespace AllocationsServer
     {
         public static void Main(string[] args)
         {
-            if(true==true){
-                
-            }
-            BuildWebHost(args).Run();
+             BuildWebHost(args).Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

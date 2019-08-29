@@ -16,7 +16,7 @@ namespace TimesheetsServer
             WebHostBuilder(args).Build();
 
         public static IWebHostBuilder WebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+            WebHost.CreateDefaultBuilder(args).UseCloudFoundryHosting()
                 // https://github.com/aspnet/KestrelHttpServer/issues/1998#issuecomment-322922164
                 .UseConfiguration(new ConfigurationBuilder().AddCommandLine(args).Build())
                 .AddCloudFoundry()

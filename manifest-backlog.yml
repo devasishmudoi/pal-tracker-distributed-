@@ -6,7 +6,6 @@ applications:
   routes:
   - route: backlog-stage-de-pr.cfapps.io
   path: Applications/BacklogServer/bin/Release/netcoreapp2.1/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-stage-de-pr.cfapps.io
   services:
   - tracker-backlog-database
+  - tracker-service-registry-de-pr
